@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/assets/img/Fondo.gif');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+
+.login{
+    background-color: #6762ac;
+    padding: 30px;
+    padding-left: 20px;
+    padding-right: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(97, 66, 66, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+.login h1{
+    color: black;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.login h2{
+    color: black;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-left: 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    
+}
+
+.boton{
+    width: 100%;
+    padding: 10px;
+    background-color: #582d7c;
+    color: #975dbe;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+}
