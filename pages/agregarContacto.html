@@ -34,5 +34,20 @@
             <button type="submit" class="btn btn-primary w-100">Guardar Contacto</button>
         </form>
     </div>
+
+    <script>
+        document.querySelectorAll('.needs-validation').forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    event.preventDefault();
+                    window.location.href = "./contactos.html";
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    </script>
 </body>
 </html>
