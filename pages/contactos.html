@@ -7,6 +7,14 @@
     <title>Contactos</title>
 </head>
 <body>
+    <header>
+        <div class="perfil-usuario">
+            <h3>Perfil del Usuario</h3>
+            <p><strong>Nombre:</strong> Juan Pérez</p>
+            <p><strong>Email:</strong> jperez@gmail.com</p>
+            <p><strong>Cuenta:</strong> Usuario Premium</p>
+        </div>
+    </header>
     <main>
         <div class="lista">
             <h2>Contactos</h2>
@@ -48,7 +56,51 @@
                     </div>
                 </li>
             </ul>
+            <div class="botones">
+                <button class="botones-agenda" id="botonA">Agregar Contacto</button>
+                <button class="botones-agenda" id="botonF">Favoritos</button>
+                <button class="botones-agenda" id="botonL">Lista de Tareas</button>
+            </div>
         </div>
     </main>
+    <script>
+        const email = localStorage.getItem("email");
+        const password = localStorage.getItem("password");
+
+        const perfilUsuario = document.querySelector('.perfil-usuario');
+        if (email && password) {
+            perfilUsuario.innerHTML = `
+                <h3>Perfil del Usuario</h3>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Contraseña:</strong> ${password}</p>
+            `;
+        } else {
+            window.location.href = '';
+        }
+        document.querySelectorAll('.mostrar-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const detalles = button.nextElementSibling;
+                if (detalles.style.display === 'block') {
+                    detalles.style.display = 'none';
+                    button.textContent = 'Mostrar';
+                } else {
+                    detalles.style.display = 'block';
+                    button.textContent = 'Ocultar';
+                }
+            });
+        });
+
+        document.getElementById('botonA').addEventListener('click', () => {
+            window.location.href = '';
+        });
+
+        document.getElementById('botonF').addEventListener('click', () => {
+            window.location.href = '';
+        });
+
+        document.getElementById('botonL').addEventListener('click', () => {
+            window.location.href = '';
+        });
+    </script>
 </body>
 </html>
