@@ -1,0 +1,19 @@
+.list-group-item {
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+.badge {
+    font-size: 0.9em;
+}
+
+.btn-warning {
+    color: #fff;
+}
+
+.btn-danger {
+    color: #fff;
+}
