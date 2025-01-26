@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/contactos.css">
+    <title>Favoritos</title>
+</head>
+<body>
+    <header>
+        <div class="perfil-usuario">
+            <h3>Perfil del Usuario</h3>
+            <p><strong>Nombre:</strong> Juan Pérez</p>
+            <p><strong>Email:</strong> jperez@gmail.com</p>
+            <p><strong>Cuenta:</strong> Usuario Premium</p>
+        </div>
+    </header>
+    <main>
+        <div class="lista">
+            <h2>Contactos</h2>
+            <ul>
+                <li class="contacto">
+                    <div class="nombre">Luis Mejia</div>
+                    <button class="mostrar-btn">Mostrar</button>
+                    <div class="detalles">
+                        <p>Número: 1248-2540</p>
+                        <p>Email: lmejia@gmail.com</p>
+                        <p>DPI: 1234567890102</p>
+                    </div>
+                </li>
+                <li class="contacto">
+                    <div class="nombre">Ceferino Rodriguez</div>
+                    <button class="mostrar-btn">Mostrar</button>
+                    <div class="detalles">
+                        <p>Número: 9653-5421</p>
+                        <p>Email: crodriguez@gmail.com</p>
+                        <p>DPI: 1234567890104</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="botones">
+                <button class="botones-agenda" id="botonA">Agregar Contacto</button>
+                <button class="botones-agenda" id="botonF">Contactos</button>
+                <button class="botones-agenda" id="botonL">Lista de Tareas</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        const email = localStorage.getItem("email");
+        const password = localStorage.getItem("password");
+        const perfilUsuario = document.querySelector('.perfil-usuario');
+        if (email && password) {
+            perfilUsuario.innerHTML = `
+                <h3>Perfil del Usuario</h3>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Contraseña:</strong> ${password}</p>
+            `;
+        } else {
+            window.location.href = '';
+        }
+
+        document.querySelectorAll('.mostrar-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const detalles = button.nextElementSibling;
+                if (detalles.style.display === 'block') {
+                    detalles.style.display = 'none';
+                    button.textContent = 'Mostrar';
+                } else {
+                    detalles.style.display = 'block';
+                    button.textContent = 'Ocultar';
+                }
+            });
+        });
+
+        document.getElementById('botonA').addEventListener('click', () => {
+            window.location.href = '';
+        });
+
+        document.getElementById('botonF').addEventListener('click', () => {
+            window.location.href = '';
+        });
+
+        document.getElementById('botonL').addEventListener('click', () => {
+            window.location.href = '';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+body {
+    background-image: url('/assets/img/Fondo.gif');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+}
+
+.perfil-usuario {
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 8px;
+    padding: 10px;
+    width: 250px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: right; 
+    z-index: 2; 
+}
+
+.perfil-usuario h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.perfil-usuario p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.lista {
+    width: 80%;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1;
+}
+
+.h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contacto {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+.contacto:last-child {
+    border-bottom: none;
+}
+
+.contacto:hover {
+    background-color: #f0f0f0;
+}
+
+.contacto a {
+    text-decoration: none;
+    color: inherit;
+    display: contents;
+    width: 100%;
+}
+
+.nombre {
+    font-weight: bold;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.email,
+.telefono {
+    color: #555;
+}
+
+.contacto:hover .nombre {
+    color: #7a46ce;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+
+.botones-agenda {
+    padding: 10px;
+    background-color: #c468e9;
+    color: #802688;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.detalles {
+    display: none;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.mostrar-btn {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #825597;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.mostrar-btn:hover {
+    background-color: #0056b3;
+}
