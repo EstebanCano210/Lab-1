@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/contactos.css">
-    <title>Contactos</title>
+    <title>Favoritos</title>
 </head>
 <body>
     <header>
@@ -45,44 +44,5 @@
             </div>
         </div>
     </main>
-    <script>
-        const email = localStorage.getItem("email");
-        const password = localStorage.getItem("password");
-        const perfilUsuario = document.querySelector('.perfil-usuario');
-        if (email && password) {
-            perfilUsuario.innerHTML = `
-                <h3>Perfil del Usuario</h3>
-                <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Contraseña:</strong> ${password}</p>
-            `;
-        } else {
-            window.location.href = '';
-        }
-
-        document.querySelectorAll('.mostrar-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                const detalles = button.nextElementSibling;
-                if (detalles.style.display === 'block') {
-                    detalles.style.display = 'none';
-                    button.textContent = 'Mostrar';
-                } else {
-                    detalles.style.display = 'block';
-                    button.textContent = 'Ocultar';
-                }
-            });
-        });
-
-        document.getElementById('botonA').addEventListener('click', () => {
-            window.location.href = '';
-        });
-
-        document.getElementById('botonF').addEventListener('click', () => {
-            window.location.href = '';
-        });
-
-        document.getElementById('botonL').addEventListener('click', () => {
-            window.location.href = '';
-        });
-    </script>
 </body>
 </html>
