@@ -75,7 +75,7 @@
                 <p><strong>Contraseña:</strong> ${password}</p>
             `;
         } else {
-            window.location.href = '';
+            window.location.href = '/index.html';
         }
         document.querySelectorAll('.mostrar-btn').forEach(button => {
             button.addEventListener('click', () => {
@@ -91,15 +91,15 @@
         });
 
         document.getElementById('botonA').addEventListener('click', () => {
-            window.location.href = '';
+            window.location.href = '/pages/agregarContacto.html';
         });
 
         document.getElementById('botonF').addEventListener('click', () => {
-            window.location.href = '';
+            window.location.href = '/pages/favoritos.html';
         });
 
         document.getElementById('botonL').addEventListener('click', () => {
-            window.location.href = '';
+            window.location.href = '/pages/listaDeTareas.html';
         });
     </script>
 </body>

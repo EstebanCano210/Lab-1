@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/contactos.css">
+    <link rel="stylesheet" href="/assets/css/contactos.css">
     <title>Favoritos</title>
 </head>
 <body>
@@ -56,7 +56,7 @@
                 <p><strong>Contraseña:</strong> ${password}</p>
             `;
         } else {
-            window.location.href = '';
+            window.location.href = '/index.html';
         }
 
         document.querySelectorAll('.mostrar-btn').forEach(button => {
@@ -73,15 +73,15 @@
         });
 
         document.getElementById('botonA').addEventListener('click', () => {
-            window.location.href = '';
+            window.location.href = '/pages/agregarContacto.html';
         });
 
         document.getElementById('botonF').addEventListener('click', () => {
-            window.location.href = '';
+            window.location.href = '/pages/contactos.html';
         });
 
         document.getElementById('botonL').addEventListener('click', () => {
-            window.location.href = '';
+            window.location.href = '/pages/listaDeTareas.html';
         });
     </script>
 </body>

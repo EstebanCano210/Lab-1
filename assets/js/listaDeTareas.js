@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const botonRegresar = document.getElementById("botonRegresar");
 
     botonRegresar.addEventListener("click", () => {
-        window.location.href = "";
+        window.location.href = "/pages/contactos.html";
     });
 
     const form = document.querySelector("form");
